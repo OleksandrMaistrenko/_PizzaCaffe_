@@ -1,0 +1,12 @@
+.home {
+  background-image: url(/client/src/pages/home/1625189927_25-kartinkin-com-p-pitstsa-fon-krasivie-foni-27.jpg);
+  background-size: cover;
+  min-height: 100%;
+  overflow-y: scroll;
+}
+.text {
+  text-align: center;
+  font-size: 40px;
+  color: wheat;
+  padding-top: 20px;
+}
