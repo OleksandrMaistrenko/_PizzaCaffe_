@@ -2,9 +2,9 @@ import MenuItem from "./models/MenuItem";
 import paperoni from "../../client/src/pages/menu/paperoni.jpg";
 import carbonara from "../../client/src/pages/menu/carbonara.jpg";
 import deMare from "../../client/src/pages/menu/deMare.jpg";
-import margarita from "../../client/src/pages/menu/margarita.png";
-import proshutto from "../../client/src/pages/menu/proshutto.png";
-import speciale from "../../client/src/pages/menu/speciale.png";
+import margarita from "../../client/src/pages/menu/margarita.jpg";
+import proshutto from "../../client/src/pages/menu/proshutto.jpg";
+import speciale from "../../client/src/pages/menu/speciale.jpg";
 import capuccino from "../../client/src/pages/menu/capuccino.png";
 import latte from "../../client/src/pages/menu/latte.png";
 import espresso from "../../client/src/pages/menu/espresso.png";
@@ -91,45 +91,53 @@ export const coffee = [
     7,
     capuccino,
     "Capuccino",
+    "super",
     ["S", "M", "L"],
     [
       { size: "S", price: 10 },
       { size: "M", price: 15 },
       { size: "L", price: 20 },
-    ]
+    ],
+    true
   ),
   new MenuItem(
     8,
     latte,
     "Latte",
-    ["S", "L"],
+    "super",
+    ["S", "M", "L"],
     [
       { size: "S", price: 10 },
       { size: "M", price: 15 },
       { size: "L", price: 20 },
-    ]
+    ],
+    true
   ),
   new MenuItem(
     9,
     espresso,
     "Espresso",
+    "selkrmkm",
     ["S", "M", "L"],
     [
       { size: "S", price: 10 },
       { size: "M", price: 15 },
       { size: "L", price: 20 },
-    ]
+    ],
+    true
   ),
   new MenuItem(
     10,
     americano,
     "Americano",
+    "klmwkf",
     ["S", "M", "L"],
     [
       { size: "S", price: 10 },
       { size: "M", price: 15 },
       { size: "L", price: 20 },
-    ]
+    ],
+    true
   ),
 ];
 

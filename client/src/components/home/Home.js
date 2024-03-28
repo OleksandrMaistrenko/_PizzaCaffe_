@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import CartMenuItem from "../header/headerItem/cartMenuItem/CartMenuItem";
 
 const Home = () => {
   return (

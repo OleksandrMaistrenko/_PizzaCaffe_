@@ -1,8 +1,8 @@
 import "./MenuItem.css";
 import React, { useState } from "react";
 
-const MenuItem = ({ pizza }) => {
-  const { imageUrl, title, description, sizes, prices, isActive } = pizza;
+const MenuItem = ({ item }) => {
+  const { imageUrl, title, description, sizes, prices, isActive } = item;
   const [selectedSize, setSelectedSize] = useState(sizes[0]);
 
   const handleSizeChange = (event) => {

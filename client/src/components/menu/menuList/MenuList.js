@@ -1,12 +1,11 @@
 import React from "react";
-import MenuItem from "./menuItem/MenuItem";
-import "./Menu.css";
+import MenuItem from "../menuItem/MenuItem";
+import "./MenuList.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { pizzas } from "../../../../server/menu/menu";
 
-const Menu = () => {
+const MenuList = ({ items }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -49,12 +48,12 @@ const Menu = () => {
   return (
     <div className="backround">
       <Slider className="mainForAllmenu" {...settings}>
-        {pizzas.map((pizza) => {
-          return <MenuItem key={pizza.id} pizza={pizza} />;
+        {items.map((item) => {
+          return <MenuItem key={item.id} item={item} />;
         })}
       </Slider>
     </div>
   );
 };
 
-export default Menu;
+export default MenuList;

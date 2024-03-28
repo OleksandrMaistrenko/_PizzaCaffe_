@@ -1,8 +1,10 @@
 import React from "react";
 import "./Header.css";
-import "./HeaderItem.css";
+
 import "./Logo.css";
-import HeaderItem from "./HeaderItem";
+import HeaderItem from "./headerItem/HeaderItem";
+import CartMenuItem from "./headerItem/cartMenuItem/CartMenuItem";
+import MainMenuItem from "./headerItem/mainMenuItem/MainMenuItem";
 
 function Header() {
   return (
@@ -11,8 +13,8 @@ function Header() {
         <HeaderItem name="Home" nav="/" />
         <HeaderItem name="About" nav="/about" />
         <div className="logo">Pizza Parmegano</div>
-        <HeaderItem name="Menu" nav="/menu" />
-        <HeaderItem name="Cart" nav="/cart" />
+        <MainMenuItem />
+        <CartMenuItem nav="/cart" />
       </div>
     </nav>
   );
