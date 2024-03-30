@@ -1,6 +1,5 @@
 import React from "react";
 import "./Header.css";
-
 import "./Logo.css";
 import HeaderItem from "./headerItem/HeaderItem";
 import CartMenuItem from "./headerItem/cartMenuItem/CartMenuItem";

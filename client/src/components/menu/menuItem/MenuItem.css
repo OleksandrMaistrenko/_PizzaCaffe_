@@ -51,7 +51,7 @@ select {
 .price {
   font-size: 20px;
 }
-button {
+.btn_add {
   display: block;
   width: 129px;
   height: 39px;

@@ -1,14 +1,24 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import "./MainMenuitem.css";
 
 const MainMenuItem = () => {
   return (
     <div className="item">
-      <NavLink to="/pizza">Pizza</NavLink>
-      <NavLink to="/coffee">Coffe</NavLink>
+      <a href="#" id="menu">
+        Menu
+      </a>
+      <div className="dropdown-menu" id="menuList">
+        <ul>
+          <li className="pizza">
+            <a href="/pizza">Pizza</a>
+          </li>
+          <li className="coffee">
+            <a href="/coffee">Coffee</a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
 
 export default MainMenuItem;
-//тут раздвоение робить дропдаун

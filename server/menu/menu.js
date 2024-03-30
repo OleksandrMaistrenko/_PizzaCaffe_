@@ -5,10 +5,10 @@ import deMare from "../../client/src/pages/menu/deMare.jpg";
 import margarita from "../../client/src/pages/menu/margarita.jpg";
 import proshutto from "../../client/src/pages/menu/proshutto.jpg";
 import speciale from "../../client/src/pages/menu/speciale.jpg";
-import capuccino from "../../client/src/pages/menu/capuccino.png";
-import latte from "../../client/src/pages/menu/latte.png";
-import espresso from "../../client/src/pages/menu/espresso.png";
-import americano from "../../client/src/pages/menu/americano.png";
+import capuccino from "../../client/src/pages/menu/capuccino.jpg";
+import latte from "../../client/src/pages/menu/latte.jpg";
+import espresso from "../../client/src/pages/menu/espresso.jpg";
+import americano from "../../client/src/pages/menu/americano.jpg";
 
 export const pizzas = [
   new MenuItem(
@@ -137,8 +137,28 @@ export const coffee = [
       { size: "M", price: 15 },
       { size: "L", price: 20 },
     ],
-    true
+    false
   ),
 ];
 
 //акции
+export const promoutions = [
+  new MenuItem(
+    7,
+    capuccino,
+    "Capuccino",
+    "super",
+    null,
+    [{ size: "Standart", price: 10 }],
+    true
+  ),
+  new MenuItem(
+    7,
+    capuccino,
+    "Capuccino",
+    "super",
+    null,
+    [{ size: "Standart", price: 10 }],
+    true
+  ),
+];

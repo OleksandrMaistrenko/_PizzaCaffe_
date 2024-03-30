@@ -3,7 +3,9 @@ import React, { useState } from "react";
 
 const MenuItem = ({ item }) => {
   const { imageUrl, title, description, sizes, prices, isActive } = item;
-  const [selectedSize, setSelectedSize] = useState(sizes[0]);
+  const [selectedSize, setSelectedSize] = useState(
+    !!sizes ? sizes[0] : "Standart"
+  );
 
   const handleSizeChange = (event) => {
     setSelectedSize(event.target.value);
@@ -23,21 +25,23 @@ const MenuItem = ({ item }) => {
         <div className="discript">{description}</div>
         <div className="decoration"></div>
         <div className="minicontainer">
-          <div className="size">
-            <label htmlFor="size">Size:</label>
-            <select
-              id="size"
-              name="size"
-              value={selectedSize}
-              onChange={handleSizeChange}
-            >
-              {sizes.map((size) => (
-                <option key={size} value={size}>
-                  {size}
-                </option>
-              ))}
-            </select>
-          </div>
+          {!!sizes && (
+            <div className="size">
+              <label htmlFor="size">Size:</label>
+              <select
+                id="size"
+                name="size"
+                value={selectedSize}
+                onChange={handleSizeChange}
+              >
+                {sizes.map((size) => (
+                  <option key={size} value={size}>
+                    {size}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
           <div className="price">{selectedPrice}</div>
         </div>
         <div className="btn_add">
