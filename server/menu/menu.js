@@ -9,6 +9,7 @@ import capuccino from "../../client/src/pages/menu/capuccino.jpg";
 import latte from "../../client/src/pages/menu/latte.jpg";
 import espresso from "../../client/src/pages/menu/espresso.jpg";
 import americano from "../../client/src/pages/menu/americano.jpg";
+import sale from "../../client/src/pages/home/sale.png";
 
 export const pizzas = [
   new MenuItem(
@@ -94,9 +95,9 @@ export const coffee = [
     "super",
     ["S", "M", "L"],
     [
-      { size: "S", price: 10 },
-      { size: "M", price: 15 },
-      { size: "L", price: 20 },
+      { size: "S", price: 2 },
+      { size: "M", price: 3 },
+      { size: "L", price: 4 },
     ],
     true
   ),
@@ -107,9 +108,9 @@ export const coffee = [
     "super",
     ["S", "M", "L"],
     [
-      { size: "S", price: 10 },
-      { size: "M", price: 15 },
-      { size: "L", price: 20 },
+      { size: "S", price: 2 },
+      { size: "M", price: 3 },
+      { size: "L", price: 4 },
     ],
     true
   ),
@@ -120,9 +121,9 @@ export const coffee = [
     "selkrmkm",
     ["S", "M", "L"],
     [
-      { size: "S", price: 10 },
-      { size: "M", price: 15 },
-      { size: "L", price: 20 },
+      { size: "S", price: 2 },
+      { size: "M", price: 3 },
+      { size: "L", price: 4 },
     ],
     true
   ),
@@ -133,9 +134,9 @@ export const coffee = [
     "klmwkf",
     ["S", "M", "L"],
     [
-      { size: "S", price: 10 },
-      { size: "M", price: 15 },
-      { size: "L", price: 20 },
+      { size: "S", price: 2 },
+      { size: "M", price: 3 },
+      { size: "L", price: 4 },
     ],
     false
   ),
@@ -144,21 +145,21 @@ export const coffee = [
 //акции
 export const promoutions = [
   new MenuItem(
-    7,
-    capuccino,
-    "Capuccino",
-    "super",
+    11,
+    sale,
+    "Action",
+    "10 percent discount when buying 2 Carbonara S",
     null,
-    [{ size: "Standart", price: 10 }],
+    [{ size: "Standart", price: 18 }],
     true
   ),
   new MenuItem(
-    7,
+    12,
     capuccino,
-    "Capuccino",
-    "super",
+    " Action",
+    "Buy 3S Capuccino for 5 euro",
     null,
-    [{ size: "Standart", price: 10 }],
+    [{ size: "Standart", price: 5 }],
     true
   ),
 ];
