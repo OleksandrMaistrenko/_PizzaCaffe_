@@ -10,6 +10,11 @@ import latte from "../../client/src/pages/menu/latte.jpg";
 import espresso from "../../client/src/pages/menu/espresso.jpg";
 import americano from "../../client/src/pages/menu/americano.jpg";
 import sale from "../../client/src/pages/home/sale.png";
+import OrderItem from "./models/OrderItem";
+
+export const cartItems = [
+  new OrderItem(1, paperoni, "Paperoni", 20, 1, 20, "M"),
+];
 
 export const pizzas = [
   new MenuItem(
@@ -22,7 +27,7 @@ export const pizzas = [
       { size: "S", price: 10 },
       { size: "L", price: 15 },
     ],
-    false
+    true
   ),
 
   new MenuItem(
@@ -71,7 +76,7 @@ export const pizzas = [
       { size: "S", price: 10 },
       { size: "L", price: 15 },
     ],
-    true
+    false
   ),
   new MenuItem(
     6,

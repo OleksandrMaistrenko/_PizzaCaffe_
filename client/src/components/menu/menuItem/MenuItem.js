@@ -16,7 +16,7 @@ const MenuItem = ({ item }) => {
   ).price;
 
   return (
-    <div className="contain">
+    <div className={`contain ${isActive ? "active" : "inactive"}`}>
       <div className="image">
         <img src={imageUrl} alt={title} />
       </div>
