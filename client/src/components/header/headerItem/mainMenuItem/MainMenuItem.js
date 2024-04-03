@@ -1,19 +1,21 @@
 import React from "react";
 import "./MainMenuitem.css";
+import HeaderItem from "../HeaderItem";
+//children зробить для раздвоения
 
 const MainMenuItem = () => {
   return (
     <div className="item">
-      <a href="#" id="menu">
-        Menu
-      </a>
+      <div id="menu">
+        <HeaderItem name="Menu" nav="/menu" />
+      </div>
       <div className="dropdown-menu" id="menuList">
         <ul>
           <li className="pizza">
-            <a href="/pizza">Pizza</a>
+            <HeaderItem name="Pizza" nav="/pizza" />
           </li>
           <li className="coffee">
-            <a href="/coffee">Coffee</a>
+            <HeaderItem name="Coffee" nav="/coffee" />
           </li>
         </ul>
       </div>

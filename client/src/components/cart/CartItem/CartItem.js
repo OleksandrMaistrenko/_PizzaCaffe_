@@ -1,5 +1,9 @@
 import "./CartItem.css";
-import { addToCart, decreaseCount } from "../../../redux/slices/cartSlice";
+import {
+  addToCart,
+  decreaseCount,
+  clearCart,
+} from "../../../redux/slices/cartSlice";
 import { useSelector, useDispatch } from "react-redux";
 
 const CartItem = ({ item }) => {
@@ -8,6 +12,12 @@ const CartItem = ({ item }) => {
   return (
     <div className="containerCart">
       <div className="window">
+        <div className="hut">
+          <div className="yourOrder">Your Ord</div>
+          <div className="clearAllCart">
+            <button onClick={() => dispatch(clearCart())}>clear all</button>
+          </div>
+        </div>
         <div className="functionalWindow">
           <div className="blockImage">
             <div>
@@ -36,6 +46,10 @@ const CartItem = ({ item }) => {
         <div className="total">
           <div className="allOrder">Your Orders</div>
           <div className="sum">{item.totalPrice}</div>
+        </div>
+
+        <div>
+          <button className="payNowButton">Pay Now</button>
         </div>
       </div>
     </div>

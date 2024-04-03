@@ -12,8 +12,13 @@ server.register(fastifyStatic, {
   root: join(__dirname, "../build"),
 });
 
+server.setNotFoundHandler((_, reply) => {
+  return reply.sendFile("index.html");
+});
+
 const port = process.env.PORT || 1234;
 const host = process.env.HOST || "localhost";
+
 server.get("/go", (request, reply) => {
   return reply.send("GET request received");
 });

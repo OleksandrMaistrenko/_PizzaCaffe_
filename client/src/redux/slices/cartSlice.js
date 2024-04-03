@@ -23,13 +23,14 @@ const cartSlice = createSlice({
   reducers: {
     addToCart(state, action) {
       const item = action.payload;
-      console.log(item);
+
       const existingItemIndex = state.cartItems.findIndex(
         (cartItem) => cartItem.id === item.id
       );
 
       if (existingItemIndex !== -1) {
         state.cartItems[existingItemIndex].count += 1;
+
         state.cartItems[existingItemIndex].totalPrice =
           state.cartItems[existingItemIndex].count * item.price;
       } else {
