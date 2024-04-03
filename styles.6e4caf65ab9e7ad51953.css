@@ -131,6 +131,7 @@ a {
   color: wheat;
   padding-top: 20px;
   display: flex;
+  gap: 5px;
 }
 
 .contain {
