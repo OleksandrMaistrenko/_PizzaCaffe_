@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
-        type: "asset/resource", // используем встроенный загрузчик asset/resource для обработки изображений
+        type: "asset/resource",
       },
     ],
   },
