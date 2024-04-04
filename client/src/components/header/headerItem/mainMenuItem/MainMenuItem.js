@@ -1,5 +1,5 @@
 import React from "react";
-import "./MainMenuitem.css";
+import "./MainMenuItem.css";
 import HeaderItem from "../HeaderItem";
 //children зробить для раздвоения
 
