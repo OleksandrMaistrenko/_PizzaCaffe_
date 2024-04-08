@@ -1,4 +1,4 @@
-import ProductItem from "./ProductItem";
+import ProductItem from "./ProductItem.mjs";
 
 class MenuItem extends ProductItem {
   constructor(id, imageUrl, title, description, sizes, prices, isActive) {

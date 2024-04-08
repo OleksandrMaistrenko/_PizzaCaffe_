@@ -27,7 +27,7 @@ const cartSlice = createSlice({
       const existingItemIndex = state.cartItems.findIndex(
         (cartItem) => cartItem.id === item.id
       );
-
+      console.log(existingItemIndex);
       if (existingItemIndex !== -1) {
         state.cartItems[existingItemIndex].count += 1;
 
@@ -45,7 +45,7 @@ const cartSlice = createSlice({
     },
     decreaseCount(state, action) {
       const item = action.payload;
-      console.log(item);
+
       const existingItemIndex = state.cartItems.findIndex(
         (cartItem) => cartItem.id === item.id
       );

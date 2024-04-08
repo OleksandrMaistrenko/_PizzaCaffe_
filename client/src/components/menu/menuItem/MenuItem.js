@@ -1,19 +1,36 @@
 import "./MenuItem.css";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../redux/slices/cartSlice";
 
 const MenuItem = ({ item }) => {
-  const { imageUrl, title, description, sizes, prices, isActive } = item;
+  const { id, imageUrl, title, description, sizes, prices, isActive } = item;
   const [selectedSize, setSelectedSize] = useState(
-    !!sizes ? sizes[0] : "Standart"
+    sizes ? sizes[0] : "Standard"
   );
+  const dispatch = useDispatch();
+
+  const selectedPrice = isActive
+    ? prices.find((price) => price.size === selectedSize)?.price
+    : "";
+
+  const handleAddToCart = () => {
+    const newItem = {
+      id: id,
+      title: title,
+      size: selectedSize,
+      price: selectedPrice,
+      totalPrice: selectedPrice,
+      count: 1,
+      imageUrl: imageUrl,
+    };
+
+    dispatch(addToCart(newItem));
+  };
 
   const handleSizeChange = (event) => {
     setSelectedSize(event.target.value);
   };
-
-  const selectedPrice = prices.find(
-    (price) => price.size === selectedSize
-  ).price;
 
   return (
     <div className={`contain ${isActive ? "active" : "inactive"}`}>
@@ -25,7 +42,7 @@ const MenuItem = ({ item }) => {
         <div className="discript">{description}</div>
         <div className="decoration"></div>
         <div className="minicontainer">
-          {!!sizes && (
+          {!!sizes && isActive && (
             <div className="size">
               <label htmlFor="size">Size:</label>
               <select
@@ -42,11 +59,13 @@ const MenuItem = ({ item }) => {
               </select>
             </div>
           )}
-          <div className="price">{selectedPrice}</div>
+          {isActive && <div className="price">{selectedPrice}</div>}
         </div>
-        <div className="btn_add">
-          <button>Add</button>
-        </div>
+        {isActive && (
+          <div className="btn_add">
+            <button onClick={handleAddToCart}>Add</button>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import { promoutions } from "../../../../server/menu/menu.js";
+import { promoutions } from "../../../../server/menu/menu.mjs";
 
 import MenuItem from "../menu/menuItem/MenuItem.js";
 

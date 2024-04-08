@@ -2,6 +2,7 @@ import fastify from "fastify";
 import fastifyStatic from "@fastify/static";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
+import { coffee, pizzas } from "./menu/menu.mjs";
 
 const server = fastify();
 
@@ -19,8 +20,12 @@ server.setNotFoundHandler((_, reply) => {
 const port = process.env.PORT || 1234;
 const host = process.env.HOST || "localhost";
 
-server.get("/go", (request, reply) => {
-  return reply.send("GET request received");
+server.get("/pizzas", (request, reply) => {
+  return reply.json(pizzas);
+});
+
+server.get("/coffee", (request, reply) => {
+  return reply.json(coffee);
 });
 
 server

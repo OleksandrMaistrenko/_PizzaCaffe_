@@ -2,12 +2,10 @@ import React from "react";
 import "./CartMenuItem.css";
 import cart from "../../../../pages/cart/cart.png";
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 const CartMenuItem = ({ nav }) => {
   const count = useSelector((state) => state.cart.totalCount);
-  useEffect(() => {}, [count]);
 
   return (
     <div className="item">

@@ -4,10 +4,14 @@ import {
   decreaseCount,
   clearCart,
 } from "../../../redux/slices/cartSlice";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
+
+  const handleRemoveItem = () => {
+    dispatch(decreaseCount({ ...item, count: 1 }));
+  };
 
   return (
     <div className="containerCart">
@@ -40,7 +44,9 @@ const CartItem = ({ item }) => {
           </div>
           <div className="blockPrice">{item.price}</div>
           <div className="clear">
-            <button className="btn_clear">X</button>
+            <button className="btn_clear" onClick={handleRemoveItem}>
+              X
+            </button>
           </div>
         </div>
         <div className="total">

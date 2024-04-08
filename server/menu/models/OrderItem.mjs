@@ -1,4 +1,4 @@
-import ProductItem from "./ProductItem";
+import ProductItem from "./ProductItem.mjs";
 
 class OrderItem {
   constructor(id, imageUrl, title, price, count, totalPrice, size) {

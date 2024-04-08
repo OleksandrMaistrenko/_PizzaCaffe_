@@ -1,6 +1,6 @@
 import React from "react";
 import MenuList from "../menuList/MenuList";
-import { coffee } from "../../../../../server/menu/menu";
+import { coffee } from "../../../../../server/menu/menu.mjs";
 
 const CoffeeMenu = () => {
   return (

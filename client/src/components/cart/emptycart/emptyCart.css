@@ -1,0 +1,32 @@
+.containerCart {
+  height: 100vh;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window {
+  width: 80%;
+  height: 600px;
+  background-color: goldenrod;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.payNowButton {
+  width: 200px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.payNowButton:hover {
+  background-color: #45a049;
+}

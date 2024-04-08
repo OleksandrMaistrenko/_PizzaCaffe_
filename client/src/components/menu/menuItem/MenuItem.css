@@ -30,6 +30,8 @@
   font-weight: 400;
   margin-bottom: 10px;
   margin: 10px;
+  max-height: 50px; /* Примерная высота, настройте под ваши нужды */
+  overflow: hidden;
 }
 .decoration {
   border-bottom: 2px solid black;
