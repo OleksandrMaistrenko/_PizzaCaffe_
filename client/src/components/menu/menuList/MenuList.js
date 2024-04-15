@@ -45,6 +45,9 @@ const MenuList = ({ items }) => {
       },
     ],
   };
+  if (!Array.isArray(items) || items.length === 0) {
+    return <div className="backround">Нет доступных элементов меню</div>;
+  }
   return (
     <div className="backround">
       <Slider className="mainForAllmenu" {...settings}>

@@ -5,9 +5,10 @@ const initialState = {
   pizzas: [],
 };
 export const getPizzas = createAsyncThunk("menu/getPizzas", async () => {
-  const response = await fetch("/pizzas");
-
+  const response = await fetch("http://localhost:1234/pizzas");
+  console.log(response);
   const responseData = await response.json();
+  console.log(responseData);
 
   return responseData;
 });

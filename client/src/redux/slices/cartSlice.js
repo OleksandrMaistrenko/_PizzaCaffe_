@@ -1,11 +1,11 @@
 import { createSlice, current } from "@reduxjs/toolkit";
-import paperoni from "../../pages/menu/paperoni.jpg";
+import paperoni from "../../../../server/resources/menu/paperoni.jpg";
 
 const initialState = {
   cartItems: [
     {
       id: 1,
-      title: "paperoni",
+      title: "Paperoni",
       size: "M",
       price: 20,
       totalPrice: 20,
