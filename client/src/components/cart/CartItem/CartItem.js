@@ -23,11 +23,14 @@ const CartItem = ({ item }) => {
         <div className="size">{item.size}</div>
       </div>
       <div className="blockCounter">
-        <button className="minus" onClick={() => dispatch(decreaseCount(item))}>
+        <button
+          className="minusM"
+          onClick={() => dispatch(decreaseCount(item))}
+        >
           -
         </button>
         <div className="count">{item.count}</div>
-        <button className="plus" onClick={() => dispatch(addToCart(item))}>
+        <button className="plusP" onClick={() => dispatch(addToCart(item))}>
           +
         </button>
       </div>

@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import CartItem from "./CartItem/CartItem";
 import { useSelector } from "react-redux";
 import "./Cart.css";
+import MyForm from "../orderForm/MyForm.js";
 
 const Cart = () => {
   const dispatch = useDispatch();
   const items = useSelector((state) => state.cart.cartItems);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const showUserForm = () => {
+    setShowModal(true);
+  };
 
   return (
     <div className="containerCart">
@@ -27,9 +34,15 @@ const Cart = () => {
           <div className="allOrder">Your Orders</div>
           <div className="sum">{totalPrice}</div>
         </div>
-
-        <div>
-          <button className="payNowButton">Order Now</button>
+        <MyForm setShowModal={setShowModal} showModal={showModal} />
+        <div className="col-12">
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={showUserForm}
+          >
+            Make Order
+          </button>
         </div>
       </div>
     </div>

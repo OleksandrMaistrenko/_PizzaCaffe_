@@ -25,7 +25,7 @@
   padding-left: 10px;
 }
 .size {
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 50px;
   position: relative;
   right: 100px;
@@ -36,7 +36,7 @@
   align-items: center;
   justify-content: space-evenly;
 }
-.minus {
+.minusM {
   font-size: 20px;
   border-radius: 50%;
   border-color: orange;
@@ -44,7 +44,7 @@
   height: 30px;
   cursor: pointer;
 }
-.plus {
+.plusP {
   font-size: 20px;
   border-radius: 50%;
   width: 30px;

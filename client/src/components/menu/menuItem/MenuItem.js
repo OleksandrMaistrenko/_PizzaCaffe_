@@ -63,7 +63,9 @@ const MenuItem = ({ item }) => {
         </div>
         {isActive && (
           <div className="btn_add">
-            <button onClick={handleAddToCart}>Add</button>
+            <button className="btnAdd" onClick={handleAddToCart}>
+              Add
+            </button>
           </div>
         )}
       </div>
